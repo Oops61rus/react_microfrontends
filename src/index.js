@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { registerApplication, start } from 'single-spa'
+import { createStore } from './store'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+window.store = createStore()
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+registerApplication({
+  name: 'header',
+  app: () => import('./Header/react.app'),
+  activeWhen: '/',
+})
+
+registerApplication({
+  name: 'main',
+  app: () => import('./Main/react.app'),
+  activeWhen: '/',
+})
+
+registerApplication({
+  name: 'footer',
+  app: () => import('./Footer/react.app'),
+  activeWhen: '/',
+})
+
+start()
