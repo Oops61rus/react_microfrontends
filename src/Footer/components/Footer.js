@@ -8,6 +8,7 @@ const Footer = () => {
 
       <div className={styles.decrement}>Here you can decrement global count
         <button className={styles.btn} onClick={window.store.decrement}>Decrement count</button>
+        <button className={styles.btn} onClick={() => window.store.fetchUsers(window.store.count)}>Fetch Users</button>
       </div>
     </footer>
   );
