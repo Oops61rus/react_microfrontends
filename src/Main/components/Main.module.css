@@ -23,6 +23,12 @@
   margin-bottom: 20px;
 }
 
+.scrollBlock {
+  margin-top: 2rem;
+  overflow-y: scroll;
+  height: 300px;
+}
+
 .btn {
   color: #22ab2d;
   border-radius: 8px;

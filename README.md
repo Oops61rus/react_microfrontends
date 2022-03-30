@@ -32,4 +32,6 @@ All applications are united by a common (primitive) state, which is contained in
 The state can be managed from different parts of the application and will change.
 
 In this example, it is possible to change the value of the counter inside the 'Main' component or from the 'Footer' application.
+From 'Footer' you can change user state, by sending request on [JSON Placeholder](https://jsonplaceholder.typicode.com/users). 
+And you see changed store in 'Main'. \
 The 'Header' will also display the value from the global state
